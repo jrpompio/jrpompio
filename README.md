@@ -1,70 +1,127 @@
-# University Projects
+# Junior Ruiz Sánchez
 
-## Teacher Assistant — University of Costa Rica
-**Mathematics Courses**
-- Assisted in teaching and tutoring math courses.
+**Electrical Engineer · Computers and Networks**  
+University of Costa Rica · Costa Rica
 
-## Community Service (TCU) — University of Costa Rica
-**Control of a Small-Scale Vehicle with Raspberry Pi**
-- Programmed Python code to control motors and servos in a mini-car using a
-  Raspberry Pi and Xbox controller.
-- Designed a GUI for user-friendly control by non-technical users.
-- Tested and improved the system.
+I enjoy connecting software with physical systems. My work spans embedded Linux,
+microcontrollers, robotics and digital design, with projects in multimedia,
+control and connected devices. I like understanding how things work, building
+tools and documenting what I learn.
 
-## Several Contributions at Arcoslab
-**Open-CoRoCo Software**
-- Improved temperature calculation to avoid math domain errors.
-- Aligned USB communication and input handling with `libopencm3-plus`.
-- Performed motor tests on Open-CoRoCo hardware.
-- Tested AS5047P-TS sensor and fixed a ROS 2 odometry bug.
+**[Explore my interactive portfolio →](https://jrpompio.github.io/)**
 
-## Improvements in Arcos Lab Educational Robot
-**Robotics Development and Hardware Integration**
-- Implemented Kinect V2 driver for ROS 2 Humble and ROS 2 Jazzy.
-- Deployed the driver on Raspberry Pi 5.
-- Designed a modular sensor slot for multiple sensors.
+## Tools I work with
 
-## Object Detection, Tracking, and Classification
-**Intelligent Surveillance System on NVIDIA Jetson Nano**
-- Developed embedded application in C using NVIDIA DeepStream SDK 6.0 and
-  GStreamer.
-- Captured real-time video from IMX477 MIPI camera or video file with bounding
-  boxes.
-- Integrated object tracking and vehicle brand classification.
-- Streamed processed video via UDP to a remote server.
-- Recorded video using hardware-accelerated encoding.
-- Deployed on NVIDIA Jetson Nano running JetPack 4.6.4.
+| Area | Technologies |
+| --- | --- |
+| Software | Python, C, C++, Git, Bash, PySide6 / Qt |
+| Embedded systems | Linux, Docker, cross-compilation, Raspberry Pi, Jetson Nano, STM32, ESP32, libopencm3 |
+| Multimedia & robotics | GStreamer, DeepStream, ROS 2, USB, UART, SPI, I²C |
+| Digital design | Verilog, Icarus Verilog, GTKWave, Yosys; academic VLSI work with Synopsys tools |
+| Networks & control | BLE, Wi-Fi, UDP, OSPF, VLANs, MATLAB, PI control |
 
-## Airflow Control for Hot Air Soldering Station
-**Flow Stabilization using PI Controllers**
-- Designed a control system to regulate airflow in a hot air soldering station.
-- Identified reduced-order plant models using MATLAB System Identification
-  Toolbox.
-- Designed and tuned PI controllers with different methods.
-- Validated controllers through simulation and experimental testing.
+I also use Codex, Claude Code and Antigravity as development assistants.
 
-## BLE–WiFi Credential Provisioning with ESP32
-**Secure Wireless Authentication and Network Connection**
-- Developed secure Wi-Fi credential transfer to TTGO ESP32 board via BLE.
-- Implemented ESP32 client in Arduino C++ to scan and authenticate.
-- Built Python BLE GATT server with BlueZ and `pydbus` on Linux.
-- Created PyQt5 GUI for real-time visualization.
-- Automated server startup with Bash scripting.
+## Selected projects
 
-## House Control (IoT)
-- Used Raspberry Pi Pico and ESP32 with MicroPython and C++.
-- Controlled actions via Telegram bot.
-- Reported gas leaks and controlled lighting with sensors.
-- Implemented Wake-on-LAN for laptop activation.
+### Embedded video processing · Jetson Nano
 
-## Humidity Sensor
-**Analog Resistive Humidity Sensor with LED Indicator**
-- Designed low-power circuit using operational amplifiers.
-- Used comparators to drive LEDs indicating humidity thresholds.
-- Simulated design with real components for efficiency.
+**Academic team project · C, Linux, GStreamer, DeepStream**
 
-## Whack-A-Mole Game (Python)
-- Implemented Whack-A-Mole game using Python, GTK, PyGObject, and Pygame.
-- Applied OOP principles.
-- Added configurable settings and persistent top 10 scores.
-- Included audiovisual feedback and themed graphics.
+Developed a video application for object detection, tracking and vehicle brand
+classification on NVIDIA Jetson Nano. The system supports UDP streaming and
+hardware-accelerated recording.
+
+```mermaid
+flowchart TD
+    A[Camera or video file] --> B[Detection and tracking]
+    B --> C[Vehicle classification]
+    C --> D[UDP stream]
+    C --> E[Video recording]
+```
+
+### Open-CoRoCo · ArcosLab contributions
+
+**Collaborative contributions · Embedded C, libopencm3, ROS 2**
+
+Improved temperature calculation, aligned USB communication and input handling
+with `libopencm3-plus`, tested motors and an AS5047P-TS sensor, and corrected an
+odometry bug in ROS 2.
+
+### Educational robotics · Kinect v2 integration
+
+**Collaborative contributions · ROS 2, Raspberry Pi 5**
+
+Contributed packaging, dependency configuration and documentation for a Kinect v2
+driver in ROS 2 on Raspberry Pi 5. Also designed a modular sensor slot for an
+educational robot.
+
+[Driver fork and contributions →](https://github.com/jrpompio/kinect2ros)
+
+### Digital security controller · Verilog
+
+**Academic project · Finite-state machines, Icarus Verilog, GTKWave**
+
+Designed a controller for door, window, motion and smoke inputs, with timed entry
+sequences and alarm outputs. Documented seven simulation scenarios with waveforms.
+A valid-password pulse and timer expiry are inputs to the controller.
+
+```mermaid
+flowchart LR
+    A[Sensor and control inputs] --> B[Verilog state machine]
+    B --> C[Alarm outputs]
+```
+
+[Source, simulation scenarios and waveforms →](https://github.com/jrpompio/sistema-seguridad-verilog)
+
+### Small-scale vehicle · Raspberry Pi
+
+**University community service · Python, motors, servos, GUI**
+
+Developed control software for a small vehicle using a Raspberry Pi and Xbox
+controller, with a graphical interface for non-technical users. Tested and refined
+the system on hardware.
+
+```mermaid
+flowchart LR
+    A[Xbox controller] --> B[Python on Raspberry Pi]
+    B --> C[Motors and steering servo]
+    D[Graphical interface] --- B
+```
+
+## More projects
+
+<details>
+<summary>Software, digital design, electronics and connected systems</summary>
+
+| Project | What I worked on | Code / details |
+| --- | --- | --- |
+| BLE–Wi-Fi provisioning | Python BLE GATT server on Linux, ESP32 client, PyQt5 interface and Bash startup scripts | [Repository](https://github.com/jrpompio/ProyectoTeleco) |
+| Airflow control | Plant identification, PI tuning, simulation and experimental testing for a hot-air soldering station | [Repository](https://github.com/jrpompio/proyectouwu) |
+| VLSI implementation | Academic logic synthesis and physical design of an Amber SoC using Synopsys tools | [Repository](https://github.com/jrpompio/ProyectoVLSI) |
+| Digital design exercises | Verilog state machines, testbenches and synthesis | [Repository](https://github.com/jrpompio/Circuitos-Digitales-II) |
+| Ethernet PCS | Team design of a 1000BASE-X Physical Coding Sublayer in Verilog | [Portfolio](https://jrpompio.github.io/) |
+| FPGA communication | Python UART client, opcode parsing and RGB565 image conversion for a Nexys A7 / RvFPGA project | [Portfolio](https://jrpompio.github.io/) |
+| Bare-metal microcontrollers | Academic C and assembly work in the microcontrollers laboratory | [Repository](https://github.com/jrpompio/IE0624_LAB_microcontroladores) |
+| Home automation | Raspberry Pi Pico and ESP32, Telegram control, sensor reporting and Wake-on-LAN | [Portfolio](https://jrpompio.github.io/) |
+| Analog humidity sensor | Low-power op-amp circuit with threshold-based LED indicators | [Portfolio](https://jrpompio.github.io/) |
+| Audio-based function generator | Signal protection and amplification using an LM358 | [Portfolio](https://jrpompio.github.io/) |
+| Whack-A-Mole | Python, GTK / PyGObject and Pygame; object-oriented design, settings and persistent scores | [Portfolio](https://jrpompio.github.io/) |
+| Connect Four | C++ game developed for a data structures and algorithms course | [Repository](https://github.com/jrpompio/4enLinea_IE0217_Proyecto) |
+
+</details>
+
+## Beyond the code
+
+At **Boston Scientific**, my process engineering internship includes dimensional
+measurements, data collection, statistical analysis in Minitab and technical
+documentation. I also developed a Python / PySide6 image-capture tool for a
+USB-C borescope to support data collection.
+
+I have also supported mathematics teaching and tutoring at the **University of
+Costa Rica**. These experiences complement my technical work with testing,
+clear documentation and communication.
+
+---
+
+[Portfolio](https://jrpompio.github.io/) · [LinkedIn](https://www.linkedin.com/in/jr-ruiz/)
